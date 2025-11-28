@@ -1,0 +1,5 @@
+# Não há dependências obrigatórias para a funcionalidade básica
+# Python 3.7+ é suficiente
+
+# Opcional: Para gerar diagramas gráficos
+matplotlib>=3.5.0

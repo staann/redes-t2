@@ -1,0 +1,158 @@
+╔══════════════════════════════════════════════════════════════════════════════╗
+║                                                                              ║
+║           PROJETO 2 - SIMULADOR DE REDE HIERÁRQUICA                          ║
+║           Redes de Computadores - 2025.2                                     ║
+║                                                                              ║
+╚══════════════════════════════════════════════════════════════════════════════╝
+
+🚀 INÍCIO RÁPIDO
+═══════════════════════════════════════════════════════════════════════════════
+
+📦 ARQUIVOS PRINCIPAIS:
+
+  ✅ network_simulator.py    → EXECUTAR ESTE! (Simulador interativo)
+  ✅ test_network.py          → Testes automatizados
+  ✅ generate_diagram.py      → Gera diagramas da rede
+  
+📚 DOCUMENTAÇÃO:
+
+  📖 README.md               → Documentação completa do projeto
+  📖 RESUMO_RELATORIO.md     → Resumo estruturado para o relatório
+  📖 INSTALACAO.md           → Guia de instalação e uso
+  📖 enderecamento.txt       → Planejamento de endereços IP
+  📖 exemplos_xprobe.txt     → Exemplos de saída do XProbe
+
+🖼️  DIAGRAMAS:
+
+  🎨 diagrama_rede.png       → Diagrama gráfico da topologia
+  🎨 diagrama_rede.txt       → Diagrama em ASCII
+
+═══════════════════════════════════════════════════════════════════════════════
+
+⚡ EXECUÇÃO RÁPIDA:
+
+1️⃣  SIMULADOR PRINCIPAL (Menu Interativo):
+   
+   python network_simulator.py
+
+   Escolha uma das opções:
+   • Ver configuração completa da rede
+   • Ver tabelas de roteamento
+   • Executar XProbe entre quaisquer IPs
+   • Testar exemplos pré-configurados
+
+2️⃣  TESTES AUTOMATIZADOS:
+   
+   python test_network.py
+
+   Executa 6 testes de XProbe automaticamente
+
+3️⃣  GERAR DIAGRAMAS:
+   
+   python generate_diagram.py
+
+   Gera diagrama em texto e PNG
+
+═══════════════════════════════════════════════════════════════════════════════
+
+📊 TOPOLOGIA DA REDE:
+
+                        c1 (Core)
+                       /         \
+                      /           \
+                 a1 (Agg)      a2 (Agg)
+                /    \          /    \
+               /      \        /      \
+           e1      e2      e3      e4      (Edge)
+           /\      /\      /\      /\
+          h1 h2   h3 h4   h5 h6   h7 h8    (Hosts)
+
+═══════════════════════════════════════════════════════════════════════════════
+
+🌐 ENDEREÇOS IP DOS HOSTS:
+
+   h1: 192.168.1.2  │  h2: 192.168.1.3  (Rede: 192.168.1.0/28)
+   h3: 192.168.2.2  │  h4: 192.168.2.3  (Rede: 192.168.2.0/28)
+   h5: 192.168.3.2  │  h6: 192.168.3.3  (Rede: 192.168.3.0/27)
+   h7: 192.168.4.2  │  h8: 192.168.4.3  (Rede: 192.168.4.0/27)
+
+═══════════════════════════════════════════════════════════════════════════════
+
+🔧 REQUISITOS:
+
+   ✓ Python 3.7 ou superior (OBRIGATÓRIO)
+   ✓ matplotlib (OPCIONAL - apenas para diagramas PNG)
+
+   Instalar matplotlib (opcional):
+   pip install matplotlib
+
+═══════════════════════════════════════════════════════════════════════════════
+
+💡 EXEMPLOS DE USO DO XPROBE:
+
+1. Comunicação através de toda a hierarquia:
+   Origem: 192.168.1.2 (h1)
+   Destino: 192.168.4.3 (h8)
+   Rota: h1 → e1 → a1 → c1 → a2 → e4 → h8 (6 hops)
+
+2. Comunicação através do core:
+   Origem: 192.168.2.2 (h3)
+   Destino: 192.168.3.2 (h5)
+   Rota: h3 → e2 → a1 → c1 → a2 → e3 → h5 (6 hops)
+
+3. Comunicação local (mesma subrede):
+   Origem: 192.168.1.2 (h1)
+   Destino: 192.168.1.3 (h2)
+   Rota: h1 → e1 → h2 (2 hops)
+
+═══════════════════════════════════════════════════════════════════════════════
+
+✅ CHECKLIST DO PROJETO:
+
+   ☑ Fase 1: Projeto de Rede
+      ✓ Topologia hierárquica implementada
+      ✓ Diagrama de rede criado
+      ✓ Endereçamento IP completo (atende todos os requisitos)
+      ✓ Tipos de enlaces especificados e justificados
+      ✓ Tabelas de roteamento estático configuradas
+
+   ☑ Fase 2: Simulação de Rede
+      ✓ Implementado em Python com grafos
+      ✓ Comando XProbe funcional
+      ✓ Cálculo de RTT com 3 amostras
+      ✓ Traçado de rota completo
+      ✓ Estatísticas detalhadas
+
+═══════════════════════════════════════════════════════════════════════════════
+
+📹 PARA O VÍDEO DE DEMONSTRAÇÃO (5 MINUTOS):
+
+   1. Mostrar diagrama da topologia (30s)
+   2. Exibir tabelas de roteamento (1min)
+   3. Executar XProbe - Exemplo 1: h1→h8 (1min 30s)
+   4. Executar XProbe - Exemplo 2: h1→h2 (1min)
+   5. Análise dos resultados (1min)
+
+═══════════════════════════════════════════════════════════════════════════════
+
+🎯 OBJETIVOS ALCANÇADOS:
+
+   ✓ Topologia hierárquica funcional
+   ✓ Endereçamento IP otimizado
+   ✓ Roteamento estático eficiente
+   ✓ Simulação realista de RTT
+   ✓ 100% de conectividade entre hosts
+   ✓ Documentação completa
+
+═══════════════════════════════════════════════════════════════════════════════
+
+📞 DÚVIDAS?
+
+   Consulte:
+   • README.md - Documentação detalhada
+   • INSTALACAO.md - Guia passo a passo
+   • RESUMO_RELATORIO.md - Material para o relatório
+
+═══════════════════════════════════════════════════════════════════════════════
+
+✨ BOA SORTE COM O PROJETO! ✨
